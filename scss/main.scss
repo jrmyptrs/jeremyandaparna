@@ -21,6 +21,7 @@ $xsmall: 375px;
 $small: 480px;
 $medium: 750px;
 $large: 1024px;
+$desktop: 1025px;
 $xlarge: 1440px;
 $padding-desktop: 40px;
 $padding-desktop--compact: 30px;
@@ -550,12 +551,18 @@ nav {
     &.hero-main {
         background: url('../img/hero.jpg') no-repeat top center;
         background-size: cover;
-        background-attachment: fixed;
+        background-attachment:scroll;
+        @media (min-width: $desktop) {
+        	background-attachment: fixed;
+        }
     }
     &.hero-date {
         background: url('../img/tunnel.jpg') no-repeat top center;
         background-size: cover;
-        background-attachment: fixed;
+        background-attachment: scroll;
+        @media (min-width: $desktop) {
+        	background-attachment: fixed;
+        }
     }
     .hero__text {
         position: absolute;
