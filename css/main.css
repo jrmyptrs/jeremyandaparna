@@ -2013,9 +2013,17 @@ nav .nav__wrap ul li:hover a {
 }
 /* line 551, ../scss/main.scss */
 .hero.hero-main {
-  background: url("../img/hero.jpg") no-repeat top center;
+  background-image: url("../img/hero_mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
   background-size: cover;
   background-attachment: scroll;
+}
+@media (min-width: 750px) {
+  /* line 551, ../scss/main.scss */
+  .hero.hero-main {
+    background-image: url("../img/hero.jpg");
+  }
 }
 @media (min-width: 1025px) {
   /* line 551, ../scss/main.scss */
@@ -2023,19 +2031,19 @@ nav .nav__wrap ul li:hover a {
     background-attachment: fixed;
   }
 }
-/* line 559, ../scss/main.scss */
+/* line 564, ../scss/main.scss */
 .hero.hero-date {
   background: url("../img/tunnel.jpg") no-repeat top center;
   background-size: cover;
   background-attachment: scroll;
 }
 @media (min-width: 1025px) {
-  /* line 559, ../scss/main.scss */
+  /* line 564, ../scss/main.scss */
   .hero.hero-date {
     background-attachment: fixed;
   }
 }
-/* line 567, ../scss/main.scss */
+/* line 572, ../scss/main.scss */
 .hero .hero__text {
   position: absolute;
   width: 100%;
@@ -2046,52 +2054,52 @@ nav .nav__wrap ul li:hover a {
   color: #fff3f3;
 }
 @media (min-width: 750px) {
-  /* line 567, ../scss/main.scss */
+  /* line 572, ../scss/main.scss */
   .hero .hero__text {
     padding: 40px;
   }
 }
-/* line 578, ../scss/main.scss */
+/* line 583, ../scss/main.scss */
 .hero .hero__text.hero__text-top {
   top: 25%;
   transform: translateY(-50%);
 }
-/* line 582, ../scss/main.scss */
+/* line 587, ../scss/main.scss */
 .hero .hero__text.hero__text-center {
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 586, ../scss/main.scss */
+/* line 591, ../scss/main.scss */
 .hero .hero__text.hero__text-bottom {
   bottom: 0;
 }
-/* line 589, ../scss/main.scss */
+/* line 594, ../scss/main.scss */
 .hero .hero__text h1 {
   font-weight: 400;
   font-size: 34px;
   line-height: 1;
 }
 @media (min-width: 375px) {
-  /* line 589, ../scss/main.scss */
+  /* line 594, ../scss/main.scss */
   .hero .hero__text h1 {
     font-size: 42px;
   }
 }
 @media (min-width: 480px) {
-  /* line 589, ../scss/main.scss */
+  /* line 594, ../scss/main.scss */
   .hero .hero__text h1 {
     font-size: 48px;
   }
 }
 @media (min-width: 750px) {
-  /* line 589, ../scss/main.scss */
+  /* line 594, ../scss/main.scss */
   .hero .hero__text h1 {
     font-size: 80px;
     padding: 0 40px;
     margin: 0 auto;
   }
 }
-/* line 605, ../scss/main.scss */
+/* line 610, ../scss/main.scss */
 .hero .hero__text h2 {
   font-family: 'MeltowSan100-Regular';
   font-weight: 400;
@@ -2100,31 +2108,31 @@ nav .nav__wrap ul li:hover a {
   margin: 0px;
 }
 @media (min-width: 480px) {
-  /* line 605, ../scss/main.scss */
+  /* line 610, ../scss/main.scss */
   .hero .hero__text h2 {
     font-size: 24px;
   }
 }
 @media (min-width: 750px) {
-  /* line 605, ../scss/main.scss */
+  /* line 610, ../scss/main.scss */
   .hero .hero__text h2 {
     font-size: 30px;
     margin: 10px 0 0 0;
   }
 }
 
-/* line 622, ../scss/main.scss */
+/* line 627, ../scss/main.scss */
 .block {
   position: relative;
 }
-/* line 624, ../scss/main.scss */
+/* line 629, ../scss/main.scss */
 .block .wrap {
   position: relative;
   padding: 30px 40px;
   margin: 0;
 }
 @media (min-width: 750px) {
-  /* line 624, ../scss/main.scss */
+  /* line 629, ../scss/main.scss */
   .block .wrap {
     padding-top: 90px;
     padding-bottom: 90px;
@@ -2133,14 +2141,14 @@ nav .nav__wrap ul li:hover a {
   }
 }
 @media (min-width: 1024px) {
-  /* line 624, ../scss/main.scss */
+  /* line 629, ../scss/main.scss */
   .block .wrap {
     padding-top: 120px;
     padding-bottom: 120px;
   }
 }
 @media (min-width: 750px) {
-  /* line 640, ../scss/main.scss */
+  /* line 645, ../scss/main.scss */
   .block.block-text .wrap {
     padding-top: 90px;
     padding-bottom: 90px;
@@ -2149,7 +2157,7 @@ nav .nav__wrap ul li:hover a {
   }
 }
 @media (min-width: 1024px) {
-  /* line 640, ../scss/main.scss */
+  /* line 645, ../scss/main.scss */
   .block.block-text .wrap {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -2157,11 +2165,11 @@ nav .nav__wrap ul li:hover a {
     padding-right: 25%;
   }
 }
-/* line 654, ../scss/main.scss */
+/* line 659, ../scss/main.scss */
 .block.block-text a, .block.block-text a:visited, .block.block-text a:focus, .block.block-text a:active {
   position: relative;
 }
-/* line 656, ../scss/main.scss */
+/* line 661, ../scss/main.scss */
 .block.block-text a:before, .block.block-text a:visited:before, .block.block-text a:focus:before, .block.block-text a:active:before {
   content: '';
   position: absolute;
@@ -2171,18 +2179,18 @@ nav .nav__wrap ul li:hover a {
   height: 2px;
   background-color: #7f8988;
 }
-/* line 667, ../scss/main.scss */
+/* line 672, ../scss/main.scss */
 .block.block-green {
   background-color: #7f8988;
   color: #fff3f3;
 }
-/* line 671, ../scss/main.scss */
+/* line 676, ../scss/main.scss */
 .block.block-gold {
   background-color: #cba894;
   color: #18192b;
 }
 
-/* line 683, ../scss/main.scss */
+/* line 688, ../scss/main.scss */
 #schedule {
   display: block;
   padding: 15px 30px;
@@ -2191,16 +2199,16 @@ nav .nav__wrap ul li:hover a {
   max-width: 220px;
   margin: 0px auto;
 }
-/* line 690, ../scss/main.scss */
+/* line 695, ../scss/main.scss */
 #schedule p {
   margin: 15px 0;
 }
 @media (min-width: 750px) {
-  /* line 683, ../scss/main.scss */
+  /* line 688, ../scss/main.scss */
   #schedule {
     padding: 20px 40px;
   }
-  /* line 695, ../scss/main.scss */
+  /* line 700, ../scss/main.scss */
   #schedule p {
     margin: 20px 0;
   }
@@ -2212,7 +2220,7 @@ nav .nav__wrap ul li:hover a {
 /*
  * Hide visually and from screen readers
  */
-/* line 710, ../scss/main.scss */
+/* line 715, ../scss/main.scss */
 .hidden {
   display: none !important;
 }
@@ -2225,7 +2233,7 @@ nav .nav__wrap ul li:hover a {
  *    causes content to wrap 1 word per line:
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
-/* line 723, ../scss/main.scss */
+/* line 728, ../scss/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2244,7 +2252,7 @@ nav .nav__wrap ul li:hover a {
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-/* line 742, ../scss/main.scss */
+/* line 747, ../scss/main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -2259,7 +2267,7 @@ nav .nav__wrap ul li:hover a {
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-/* line 756, ../scss/main.scss */
+/* line 761, ../scss/main.scss */
 .invisible {
   visibility: hidden;
 }
@@ -2275,7 +2283,7 @@ nav .nav__wrap ul li:hover a {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 773, ../scss/main.scss */
+/* line 778, ../scss/main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -2284,7 +2292,7 @@ nav .nav__wrap ul li:hover a {
   /* 2 */
 }
 
-/* line 778, ../scss/main.scss */
+/* line 783, ../scss/main.scss */
 .clearfix:after {
   clear: both;
 }
@@ -2306,7 +2314,7 @@ nav .nav__wrap ul li:hover a {
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 @media print {
-  /* line 808, ../scss/main.scss */
+  /* line 813, ../scss/main.scss */
   *,
   *:before,
   *:after {
@@ -2318,18 +2326,18 @@ nav .nav__wrap ul li:hover a {
     text-shadow: none !important;
   }
 
-  /* line 817, ../scss/main.scss */
+  /* line 822, ../scss/main.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 821, ../scss/main.scss */
+  /* line 826, ../scss/main.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 825, ../scss/main.scss */
+  /* line 830, ../scss/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -2338,18 +2346,18 @@ nav .nav__wrap ul li:hover a {
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  /* line 835, ../scss/main.scss */
+  /* line 840, ../scss/main.scss */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
   }
 
-  /* line 839, ../scss/main.scss */
+  /* line 844, ../scss/main.scss */
   pre {
     white-space: pre-wrap !important;
   }
 
-  /* line 843, ../scss/main.scss */
+  /* line 848, ../scss/main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
@@ -2360,18 +2368,18 @@ nav .nav__wrap ul li:hover a {
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-  /* line 853, ../scss/main.scss */
+  /* line 858, ../scss/main.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 858, ../scss/main.scss */
+  /* line 863, ../scss/main.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 864, ../scss/main.scss */
+  /* line 869, ../scss/main.scss */
   p,
   h2,
   h3 {
@@ -2379,7 +2387,7 @@ nav .nav__wrap ul li:hover a {
     widows: 3;
   }
 
-  /* line 870, ../scss/main.scss */
+  /* line 875, ../scss/main.scss */
   h2,
   h3 {
     page-break-after: avoid;

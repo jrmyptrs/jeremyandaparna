@@ -549,9 +549,14 @@ nav {
         content: '';
     }
     &.hero-main {
-        background: url('../img/hero.jpg') no-repeat top center;
+        background-image: url('../img/hero_mobile.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
         background-size: cover;
         background-attachment:scroll;
+        @media (min-width: $medium) {
+        	background-image: url('../img/hero.jpg');
+        }
         @media (min-width: $desktop) {
         	background-attachment: fixed;
         }
