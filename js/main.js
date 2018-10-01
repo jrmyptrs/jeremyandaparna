@@ -117,7 +117,7 @@ $(document).ready(function(){
 
 	// Password protect the RSVP form
     $("#pwd").keyup(function() {
-      if ($('#pwd').val() == "sedona" || $('#pwd').val() == "Sedona" || $('#pwd').val() == "SEDONA" ){
+      if ($('#pwd').val() == "sedona" || $('#pwd').val() == "Sedona" || $('#pwd').val() == "SEDONA" || $('#pwd').val() == "Sedona " || $('#pwd').val() == "SEDONA " || $('#pwd').val() == "sedona " ){
       	$("#pwd-form").fadeOut('slow');
         $('#pwd-protected').fadeIn('slow');
       }
