@@ -117,13 +117,24 @@ $(document).ready(function(){
 
 	// Password protect the RSVP form
     $("#pwd").keyup(function() {
-      if ($('#pwd').val() == "sedona"){
+      if ($('#pwd').val() == "sedona" || $('#pwd').val() == "Sedona" || $('#pwd').val() == "SEDONA" ){
       	$("#pwd-form").fadeOut('slow');
         $('#pwd-protected').fadeIn('slow');
       }
     });
 
-    // Quantity Buttons for Product Page
+    // Show or Hide Guest Count
+	$(function() {
+	  $('.rsvp-radio').on('change',function() {
+        if( $('#rsvp-decline').is(':checked') ) {
+          $('#guest-count-container').slideUp('slow');
+        } else {
+          $('#guest-count-container').slideDown('slow');
+        }
+	  });
+	});
+
+    // Quantity Buttons for RSVP form
 	var qtyInput = $("input#guest-count");
 
 	$(".js-qty--minus").click(function(e) {
@@ -142,14 +153,66 @@ $(document).ready(function(){
 	  qtyInput.val(Number(qtyInput.val()) + 1); 
 	});
 
-	$("#rsvp-form").submit(function(e) {
+	ajaxMailChimpForm($("#rsvp-form"), $("#rsvp-result"));
+	// Turn the given MailChimp form into an ajax version of it.
+	// If resultElement is given, the subscribe result is set as html to
+	// that element.
+	function ajaxMailChimpForm($form, $resultElement){
+	// Hijack the submission. We'll submit the form manually.
+	$form.submit(function(e) {
 	  e.preventDefault();
-
-	  var $form = $(this);
-	  $.post($form.attr("action"), $form.serialize()).then(function() {
-	    //alert("Thank you!");
-	    $form.hide('fast');
-	    $('#rsvp-success').show('slow');
-	  });
+	  if (!isValidEmail($form)) {
+	    var error =  "A valid email address must be provided.";
+	    $resultElement.html("<p>"+error+"</p>");
+	    $resultElement.css("color", "red");
+	  } else {
+	    $resultElement.css("color", "#18192b");
+	    $resultElement.html("<p>RSVPing...</p>");
+	    submitSubscribeForm($form, $resultElement);
+	  }
 	});
+	}
+	// Validate the email address in the form
+	function isValidEmail($form) {
+	// If email is empty, show error message.
+	// contains just one @
+	var email = $form.find("input[type='email']").val();
+	if (!email || !email.length) {
+	  return false;
+	} else if (email.indexOf("@") == -1) {
+	  return false;
+	}
+	return true;
+	}
+	// Submit the form with an ajax/jsonp request.
+	// Based on http://stackoverflow.com/a/15120409/215821
+	function submitSubscribeForm($form, $resultElement) {
+	$.ajax({
+	  type: "GET",
+	  url: $form.attr("action"),
+	  data: $form.serialize(),
+	  cache: false,
+	  dataType: "jsonp",
+	  jsonp: "c", // trigger MailChimp to return a JSONP response
+	  contentType: "application/json; charset=utf-8",
+	  error: function(error){
+	    // According to jquery docs, this is never called for cross-domain JSONP requests
+	  },
+	  success: function(data){
+	    if (data.result != "success") {
+	      //alert(data['msg']);
+	      var message = data.msg || "Sorry. Unable to RSVP. Please try again later.";
+	      $resultElement.css("color", "red");
+	      if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+	        message = "<p>We've already received your RSVP. Please email us at hello@jeremyandaparna.com to make changes or if you have any questions.</p>";
+	        $resultElement.css("color", "#18192b");
+	      }
+	      $resultElement.html('<p>'+message+'</p>');
+	    } else {
+	      $resultElement.css("color", "#18192b");
+	      $resultElement.html("<p>Thank you so much! Your RSVP has been submitted and we can't wait to celebrate with you. If you need to make any changes or if you have any questions, please email us at hello@jeremyandaparna.com</p>");
+	    }
+	  }
+	});
+	}
 });
