@@ -41,78 +41,6 @@
     </div>
   </nav>
 
-  <section id="rsvp">
-    <div class="rsvp__wrap">
-      <div id="close-rsvp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32"><path d="M505.9 6.1c-8.1-8.1-21.2-8.1-29.2 0L6.1 476.7c-8.1 8.1-8.1 21.2 0 29.2C10.1 510 15.4 512 20.7 512c5.3 0 10.6-2 14.6-6.1L505.9 35.3C514 27.2 514 14.1 505.9 6.1z" /><path d="M505.9 476.7L35.3 6.1c-8.1-8.1-21.2-8.1-29.2 0 -8.1 8.1-8.1 21.2 0 29.2l470.6 470.6c4 4 9.3 6.1 14.6 6.1 5.3 0 10.6-2 14.6-6.1C514 497.9 514 484.8 505.9 476.7z" /></svg>
-      </div>
-      <div id="pwd-form" class="rsvp-flex rsvp__password text-center">
-        <form>
-          <p>Please enter the password below, or email us at hello@jeremyandaparna.com for help!</p>
-          <input id="pwd" type="text" name="pwd" placeholder="Password" />
-        </form>
-      </div>
-      <div id="pwd-protected" class="rsvp-flex rsvp__form" style="display: none;">
-        <form id="rsvp-form" name="rsvp" action="https://jeremyandaparna.us19.list-manage.com/subscribe/post-json?u=93a44184d88747c9e4bc3512f&amp;id=c9f9caac68" method="get">
-          <h2 class="text-center">RSVP</h2>
-          <p class="text-center"><small><strong>Kindly RSVP by December 1st 2018</strong></small></p>
-          <div class="form-group">
-            <div class="row">
-              <div class="col col-half">
-                <input type="text" name="FNAME" value="" placeholder="First" required>
-              </div>
-              <div class="col col-half">
-                <input type="text" name="LNAME" value="" placeholder="Last" required>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col col-full">
-                <input type="email" name="EMAIL" placeholder="your@email.com" required>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col col-full">
-                <label class="radio">
-                  <input name="ATTENDING" type="radio" value="Will Attend" checked id="rsvp-accept" class="rsvp-radio">
-                  <span>Will Attend</span>
-                </label>
-                <div id="guest-count-container">
-                  <h4>Number of Guests</h4>
-                  <span class="js-qty--minus">–</span>
-                  <input type="text" pattern="[0-9]*" id="guest-count" name="GUESTS" value="1">
-                  <span class="js-qty--plus">+</span>
-                </div>
-                <label class="radio">
-                  <input name="ATTENDING" type="radio" value="Will Not Attend" id="rsvp-decline" class="rsvp-radio">
-                  <span>Will Not Attend</span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col col-full">
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_93a44184d88747c9e4bc3512f_c9f9caac68" tabindex="-1" value=""></div>
-                <input type="submit" value="Submit RSVP" class="btn btn--green">
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div id="rsvp-result"></div>
-          </div>
-        </form>
-        <div style="display: none;" id="rsvp-success">
-          <p>Thank you so much! Your RSVP has been submitted and we can't wait to celebrate with you. If you need to make any changes or if you have any questions, please email us at hello@jeremyandaparna.com</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div id="rsvp__bg" class="close-rsvp"></div>
   <section id="home" class="hero hero-main">
     <div class="hero__text hero__text-bottom" data-aos="zoom-out-up">
       <h1>Jeremy&nbsp;<span>+</span>&nbsp;Aparna Are&nbsp;Getting&nbsp;Married</h1>
@@ -203,6 +131,9 @@
       <h3 class="h1 text-center">Photos</h3>
       <div class="photos__slider" id="photo-slider">
         <div>
+          <img src="img/gallery_008.jpg" alt="">
+        </div>
+        <div>
           <img src="img/gallery_006.jpg" alt="">
         </div>
         <div>
@@ -226,7 +157,78 @@
       </div>
     </div>
   </section>
-
+  <section id="rsvp">
+    <div class="rsvp__wrap">
+      <div id="close-rsvp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32"><path d="M505.9 6.1c-8.1-8.1-21.2-8.1-29.2 0L6.1 476.7c-8.1 8.1-8.1 21.2 0 29.2C10.1 510 15.4 512 20.7 512c5.3 0 10.6-2 14.6-6.1L505.9 35.3C514 27.2 514 14.1 505.9 6.1z" /><path d="M505.9 476.7L35.3 6.1c-8.1-8.1-21.2-8.1-29.2 0 -8.1 8.1-8.1 21.2 0 29.2l470.6 470.6c4 4 9.3 6.1 14.6 6.1 5.3 0 10.6-2 14.6-6.1C514 497.9 514 484.8 505.9 476.7z" /></svg>
+      </div>
+      <div id="pwd-form" class="rsvp-flex rsvp__password text-center">
+        <form>
+          <p>Please enter the password below, or email us at hello@jeremyandaparna.com for help!</p>
+          <input id="pwd" type="text" name="pwd" placeholder="Password" />
+        </form>
+      </div>
+      <div id="pwd-protected" class="rsvp-flex rsvp__form" style="display: none;">
+        <form id="rsvp-form" name="rsvp" action="https://jeremyandaparna.us19.list-manage.com/subscribe/post-json?u=93a44184d88747c9e4bc3512f&amp;id=c9f9caac68" method="get">
+          <h2 class="text-center">RSVP</h2>
+          <p class="text-center"><small><strong>Kindly RSVP by December 1st 2018</strong></small></p>
+          <div class="form-group">
+            <div class="row">
+              <div class="col col-half">
+                <input type="text" name="FNAME" value="" placeholder="First" required>
+              </div>
+              <div class="col col-half">
+                <input type="text" name="LNAME" value="" placeholder="Last" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col col-full">
+                <input type="email" name="EMAIL" placeholder="your@email.com" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col col-full">
+                <label class="radio">
+                  <input name="ATTENDING" type="radio" value="Will Attend" checked id="rsvp-accept" class="rsvp-radio">
+                  <span>Will Attend</span>
+                </label>
+                <div id="guest-count-container">
+                  <h4>Number of Guests</h4>
+                  <span class="js-qty--minus">–</span>
+                  <input type="text" pattern="[0-9]*" id="guest-count" name="GUESTS" value="1">
+                  <span class="js-qty--plus">+</span>
+                </div>
+                <label class="radio">
+                  <input name="ATTENDING" type="radio" value="Will Not Attend" id="rsvp-decline" class="rsvp-radio">
+                  <span>Will Not Attend</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col col-full">
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_93a44184d88747c9e4bc3512f_c9f9caac68" tabindex="-1" value=""></div>
+                <input type="submit" value="Submit RSVP" class="btn btn--green">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div id="rsvp-result"></div>
+          </div>
+        </form>
+        <div style="display: none;" id="rsvp-success">
+          <p>Thank you so much! Your RSVP has been submitted and we can't wait to celebrate with you. If you need to make any changes or if you have any questions, please email us at hello@jeremyandaparna.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="rsvp__bg" class="close-rsvp"></div>
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="js/main.js"></script>
 

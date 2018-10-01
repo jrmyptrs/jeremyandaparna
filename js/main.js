@@ -61,6 +61,7 @@ $(document).ready(function(){
 	  arrows: true,
 	  autoplay: true,
 	  autoplaySpeed: 6500,
+	  lazyLoad: 'progressive',
 	  responsive: [
 	    {
 	      breakpoint: 750,
@@ -204,13 +205,17 @@ $(document).ready(function(){
 	      var message = data.msg || "Sorry. Unable to RSVP. Please try again later.";
 	      $resultElement.css("color", "red");
 	      if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
-	        message = "<p>We've already received your RSVP. Please email us at hello@jeremyandaparna.com to make changes or if you have any questions.</p>";
+	        message = "<p>We've already received your RSVP. Please email hello@jeremyandaparna.com if you have any questions or need to make a change.</p>";
 	        $resultElement.css("color", "#18192b");
 	      }
 	      $resultElement.html('<p>'+message+'</p>');
 	    } else {
 	      $resultElement.css("color", "#18192b");
-	      $resultElement.html("<p>Thank you so much! Your RSVP has been submitted and we can't wait to celebrate with you. If you need to make any changes or if you have any questions, please email us at hello@jeremyandaparna.com</p>");
+	      if( $('#rsvp-decline').is(':checked') ) {
+	      	$resultElement.html("<p>Thank you for your reply. We'll miss you!</p>");
+	      } else {
+	        $resultElement.html("<p>Thank you so much! We can't wait to celebrate with you.</p>");
+	      }
 	    }
 	  }
 	});
