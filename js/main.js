@@ -60,7 +60,7 @@ $(document).ready(function(){
 	  slidesToScroll: 1,
 	  arrows: true,
 	  autoplay: true,
-	  autoplaySpeed: 6500,
+	  autoplaySpeed: 5000,
 	  lazyLoad: 'progressive',
 	  responsive: [
 	    {
